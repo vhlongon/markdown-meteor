@@ -1,4 +1,5 @@
 import React, {Component}  from 'react';
+import Accounts from './Accounts';
 
 class Header extends Component {
 
@@ -10,11 +11,12 @@ class Header extends Component {
     return (
       <nav className="nav navbar-default">
         <div className="navbar-header">
+
           <a className="navbar-brand">Markbin</a>
         </div>
         <ul className="nav navbar-nav">
           <li>
-            <a>Sign up</a>
+            <Accounts />
           </li>
           <li>
             <a>Create Bin</a>
