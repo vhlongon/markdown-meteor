@@ -4,7 +4,8 @@ import React, {Component}  from 'react';
 import ReactDOM from 'react-dom';
 // This ships with Meteor
 import {Template} from 'meteor/templating';
-// this we add to meteor to handle authentication
+// this also ships with meteor plus
+//we add the packages necesseary for authentication (meteor add accounts-ui accounts-password)
 import {Blaze} from 'meteor/blaze';
 
 class Accounts extends Component {
@@ -17,10 +18,10 @@ class Accounts extends Component {
     // called once when the comp is first rendered
     // Render the Blaze accounts form the find the div we just rendered in the 'render' method
     // and place the Blaze accounts form in that div
-    this.view = Blaze.render(Template.loginButtons,
-      ReactDOM.findDOMNode(this.refs.container));
-
-      console.log(ReactDOM.findDOMNode(this.refs.container));
+    this.view = Blaze.render(
+      Template.loginButtons,
+      ReactDOM.findDOMNode(this.refs.container)
+    );
   }
 
   componentWillUnmount() {
