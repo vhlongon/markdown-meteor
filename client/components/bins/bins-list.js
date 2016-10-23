@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {createContainer} from 'meteor/react-meteor-data';
 import {Bins} from '../../../imports/collections/bins';
+import {Link} from 'react-router';
 
 class BinsList extends Component {
 
@@ -14,7 +15,7 @@ class BinsList extends Component {
           for each bin object, if you would just write {this.onBinRemove(bin)} the function would be
           call directly instead and we wouldn't have the correct refence for each bin created */
         <li className="list-group-item" key={bin._id}>
-          Bin: {bin._id}
+          <Link to={`bins/${bin._id}`}> Bin: {bin._id}</Link>
           <span className="pull-right">
             <button className="btn btn-danger"
               onClick={ () => this.onBinRemove(bin) }>
