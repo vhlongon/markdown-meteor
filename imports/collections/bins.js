@@ -10,6 +10,10 @@ Meteor.methods({
       SharedWidth: [],
       ownerId: this.userId //this.userId is available across the whole app in Meteor when using Meteor native autentification functionality
     });
+  },
+  'bins.remove': function(bin) {
+    // remove the bin send to the function from the collection
+    return Bins.remove(bin);
   }
 });
 
