@@ -10,11 +10,17 @@ class BinsMain extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <BinsEditor bin={this.props.bin}></BinsEditor>
-      </div>
-    );
+    if(!this.props.bin) {
+      return (
+        <div>Loading...</div>
+      );
+    } else {
+      return (
+        <div>
+          <BinsEditor bin={this.props.bin} />
+        </div>
+      );
+    }
   }
 }
 
