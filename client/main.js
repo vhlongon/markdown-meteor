@@ -11,6 +11,7 @@ const routes = (
     <Route path="/" component={App} >
       <IndexRoute component={BinsList} />
       <Route path="bins/:binId" component={BinsMain} />
+      <Route path="/*" component={BinsList} />
     </Route>
   </Router>
 );
