@@ -9,6 +9,7 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 const routes = (
   <Router history={browserHistory}>
     <Route path="/" component={App} >
+      <IndexRoute component={BinsList} />
       <Route path="bins" component={BinsMain} />
     </Route>
   </Router>
