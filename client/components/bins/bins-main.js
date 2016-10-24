@@ -34,5 +34,9 @@ export default createContainer( (props) => {
   const {binId} = props.params;
   // Subscribe to the collection in case the user type the direct url for the bin
   Meteor.subscribe('bins');
+
+  // this make sure that the user also has access to bins created by other users that are shared with them
+  Meteor.subscribe('sharedBins');
+
   return { bin:  Bins.findOne(binId) };
 }, BinsMain);
