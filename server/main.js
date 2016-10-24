@@ -23,6 +23,7 @@ Meteor.startup(() => {
     // to the property called SharedWith, which is expected to be an array,
     // then $elemMatch true to match the property with the email variable above
     // wuth another additional modifier, $eq, which instead for equals to.
+    // {$eq: email} is called a subquery
     return Bins.find({
       sharedWith: {$elemMatch: {$eq: email}}
     });

@@ -30,7 +30,7 @@ class BinsShare extends Component {
           </div>
         </div>
         <div>
-          Shared width:
+          <span>Shared width: </span>
           <div className="btn-group">
             {this.renderShareList()}
           </div>
